@@ -1,0 +1,3 @@
+```
+    children: React.PropTypes.node
+  ```

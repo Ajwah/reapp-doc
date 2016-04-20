@@ -1,0 +1,3 @@
+```
+    title: React.PropTypes.string
+  ```

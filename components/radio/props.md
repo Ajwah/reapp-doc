@@ -1,0 +1,3 @@
+```
+    iconProps: React.PropTypes.object
+  ```

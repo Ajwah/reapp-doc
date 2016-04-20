@@ -1,0 +1,3 @@
+```
+    optionStyles: React.PropTypes.object,
+  ```
