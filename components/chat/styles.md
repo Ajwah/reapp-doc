@@ -1,24 +1,9 @@
-```
-    var {
-      children,
-      itemProps,
-      wrap,
-      ...props } = this.props;
-
-    return (
-      <div {...this.componentProps()} {...props}>
-        {React.Children.map(children, (li, i) => {
-          if (wrap)
-            return (
-              <ChatItem {...itemProps}
-                index={i}
-                key={i}>
-                {li.content || li}
-              </ChatItem>
-            );
-
-          return clone(li, { key: i, index: i });
-        })}
-      </div>
-    );
-  ```
+```{,
+  self: {
+    padding: 10,
+    margin: 0,
+    flex: 1,
+    flexDirection: 'column-reverse',
+    overflowY: 'scroll'
+  }
+}```

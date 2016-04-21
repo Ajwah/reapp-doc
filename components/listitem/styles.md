@@ -1,88 +1,112 @@
 ```
-    var {
-      children,
-      title,
-      titleAfter,
-      titleSub,
-      before,
-      after,
-      wrapper,
-      icon,
-      nopad,
-      index,
-      fulltext,
-      ...props } = this.props;
+    self: {
+      background: c.listBG,
+      listStyle: 'none',
+      margin: 0,
+      padding: '0 0 0 20px',
+      overflow: 'hidden',
+      flexFlow: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      minHeight: 44,
+      position: 'relative',
+      transition: 'background linear 50ms'
+    },
 
-    if (index === 0) {
-      this.addStyles('content', 'borderless');
-      this.addStyles('after', 'borderless');
+    tapActive: {
+      background: '#f2f2f2'
+    },
+
+    borderless: {
+      borderTop: 'none'
+    },
+
+    arrow: {
+      margin: 'auto 8px auto 0',
+      color: '#cfcfcf'
+    },
+
+    wrapper: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      maxWidth: 'none',
+      flexFlow: 'row',
+      justifyContent: 'flex-end',
+      zIndex: 1
+    },
+
+    before: {
+      flexShrink: 0,
+      flexWrap: 'nowrap',
+      margin: '0 12px 0 0'
+    },
+
+    content: {
+      borderTop: c.onePx + ' solid ' + c.listItemBorderColor,
+      flexShrink: 1,
+      flexGrow: 800,
+      color: c.listItemContentColor,
+      padding: '11px 12px 11px 0',
+      position: 'relative'
+    },
+
+    contentNoPad: {
+      padding: 0
+    },
+
+    titleTop: {
+      flexFlow: 'row',
+      justifyContent: 'space-between',
+      maxWidth: '100%'
+    },
+
+    title: {
+      fontWeight: 500,
+      maxWidth: '100%'
+    },
+
+    titleAfter: {
+      color: c.listItemTitleAfterColor,
+      fontSize: '15px'
+    },
+
+    titleSub: {
+      fontSize: '15px',
+      fontWeight: 400,
+      whiteSpace: 'nowrap',
+      textOverflow: 'ellipsis',
+      minWidth: 0,
+      display: 'block',
+      overflow: 'hidden'
+    },
+
+    children: {
+      maxHeight: 42,
+      fontSize: '15px',
+      lineHeight: '22px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    },
+
+    fulltext: {
+      maxHeight: 'none'
+    },
+
+    childrenNoTitle: {
+      fontSize: '17px',
+      paddingRight: 10
+    },
+
+    after: {
+      borderTop: c.onePx + ' solid ' + c.listItemBorderColor,
+      color: c.listItemAfterColor,
+      flexShrink: 0,
+      padding: '0 12px',
+      justifyContent: 'center',
+      whiteSpace: 'nowrap',
+      alignSelf: 'stretch'
     }
-
-    if (fulltext)
-      this.addStyles('children', 'fulltext');
-
-    // make a top level link into a wrapper so it can take up the whole item
-    if (!wrapper && this.hasLinkAsChild(children)) {
-      wrapper = children;
-      children = wrapper.props.children;
-    }
-
-    if (!this.getStyleVal('children', 'color'))
-      this.addStyles('children', {
-        color: this.getConstant(title ? 'listItemChildrenColor' : 'listItemColor')
-      });
-
-    if (wrapper) {
-      var hasLinkIcon = this.isLink(wrapper) || icon;
-
-      wrapper = clone(wrapper, {
-        children: hasLinkIcon ?
-          this.getIcon() :
-          null,
-        style: this.getStyles('wrapper')[0]
-      });
-
-      // pad out right side if it has a wrapper
-      if (hasLinkIcon)
-        this.addStyles({ paddingRight: 20 });
-    }
-    else if (icon) {
-      wrapper = this.getIcon();
-    }
-
-    var hasTitle = (title || titleAfter);
-
-    if (!hasTitle)
-      this.addStyles('children', 'childrenNoTitle');
-
-    if (nopad || children && children.type && children.type.liNoPad)
-      this.addStyles('content', 'contentNoPad');
-
-    var section = this.makeSection;
-    var content = [
-      section('wrapper', wrapper),
-      section('before', before),
-      section('content', [
-        hasTitle && section('titleTop', [
-          section('title', title),
-          section('titleAfter', titleAfter)
-        ]),
-        section('titleSub', titleSub),
-        section('children', children)
-      ]),
-      section('after', after),
-    ];
-
-    var tapProps;
-    if (this.props.onTap)
-      tapProps = this.tappableProps();
-
-    if (this.state.tapActive)
-      this.addStyles('tapActive');
-
-    return (
-      <div {...tapProps} {...props} {...this.componentProps()}>
-        {content}
-      </div>
-    );
-  ```
+```

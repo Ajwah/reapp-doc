@@ -1,24 +1,28 @@
 ```
-    var { total, active, color, ...props } = this.props;
+  { hexToRGB, hexToRGBA } = require('../../../lib/ConstantsHelpers');
 
-    if (color) {
-      this.addStyles('dotInactive', { background: hexToRGBA(color, 0.2) });
-      this.addStyles('dotActive', { background: color });
-    }
+  self: {
+    pointerEvents: 'none',
+  }
 
-    var dots = [];
+  dotInactive: {
+    borderRadius: 10,
+    width: 4,
+    height: 4,
+    margin: 2,
+    background: hexToRGBA(c.dotBG, 0.2)
+  }
 
-    for (let i = 0; i < total; i++) {
-      dots.push(
-        <div {...this.componentProps(i === active ? 'dotActive' : 'dotInactive')} key={i} />
-      );
-    }
+  dotActive: {
+    borderRadius: 10,
+    width: 4,
+    height: 4,
+    margin: 2,
+    background: hexToRGB(c.dotBG)
+  }
 
-    return (
-      <div {...this.componentProps()} {...props}>
-        <div {...this.componentProps('inner')}>
-          {dots}
-        </div>
-      </div>
-    );
-  ```
+  inner: {
+    margin: 'auto',
+    flexFlow: 'row',
+  }
+}```

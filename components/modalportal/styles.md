@@ -1,68 +1,56 @@
 ```
-    var {
-      modalProps,
-      title,
-      type,
-      children,
-      open,
-      ...props } = this.props;
+    self: {
+      position: 'fixed',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      visibility: 'hidden',
+      zIndex: -1
+    },
 
-    if (open) {
-      this.addClass('open');
-      this.addStyles('open');
+    open: {
+      visibility: 'visible',
+      zIndex: 15000,
+      opacity: 1
+    },
+
+    bg: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: c.modalBackgroundBG
+    },
+
+    modal: {
+      minWidth: 270,
+      maxWidth: '80%',
+      margin: 'auto',
+      background: c.modalBG,
+      padding: 0,
+      borderRadius: 7,
+      textAlign: 'center',
+      flexShrink: 1
+    },
+
+    buttons: {
+      flexFlow: 'row'
+    },
+
+    inner: {
+      padding: 15,
+      borderBottom: c.onePx + ' solid ' + c.modalBorderColor
+    },
+
+    title: {
+      color: c.black,
+      fontSize: '18px',
+      fontWeight: 500
+    },
+
+    text: {
+      marginTop: 5
     }
-
-    if (modalProps)
-      this.addStyles('modal', modalProps.styles);
-
-    var buttons;
-    switch (type) {
-      case 'alert':
-        buttons = [
-          <ModalButton confirm onTap={this.handleConfirm} stopPropagation>OK</ModalButton>
-        ];
-        break;
-      case 'confirm':
-        buttons = [
-          <ModalButton styles={{ self: { borderLeft: 'none' } }} onTap={this.handleCancel} stopPropagation>Cancel</ModalButton>,
-          <ModalButton confirm onTap={this.handleConfirm} stopPropagation>OK</ModalButton>
-        ];
-        break;
-      case 'custom':
-        buttons = [];
-        break;
-    }
-
-    var buttonWidth = (100 / buttons.length) + '%';
-    var style = {
-      flexBasis: buttonWidth,
-      WebkitFlexBasis: buttonWidth,
-      maxWidth: buttonWidth
-    };
-
-    return (
-      <div {...this.componentProps()} {...props}>
-        <Tappable
-          {...this.componentProps('bg')}
-          onTap={this.handleBgClose}
-          stopPropagation/>
-        <div {...this.componentProps('modal')}>
-          <div {...this.componentProps('inner')}>
-            {title &&
-              <div {...this.componentProps('title')}>
-                {title}
-              </div>
-            }
-            <div {...this.componentProps('text')}>
-              {children}
-            </div>
-          </div>
-          <div {...this.componentProps('buttons')}>
-            {clone(buttons, (props, index) => {
-              return { index, style };
-            }, true)}
-          </div>
-        </div>
-      </div>
-    );
-  ```
+```

@@ -1,4 +1,12 @@
-```
+```{ ????
+self: {
+  this.addStyles({
+    shapeRendering: shapeRendering ? shapeRendering : 'initial',
+    fill: color
+  });
+  margin: auto
+}
+
     var {
       size,
       file,
@@ -38,4 +46,4 @@
         <g dangerouslySetInnerHTML={{__html: file }} />
       </svg>
     );
-  ```
+  }```

@@ -1,7 +1,5 @@
-```
-    return (
-      <div>
-        {this.props.children}
-      </div>
-    );
-  ```
+```{,
+  self: {
+    margin: 0
+  }
+}```

@@ -1,4 +1,4 @@
-```
+```{
     name: React.PropTypes.string,
     customClasses: React.PropTypes.object,
     inputStyles: React.PropTypes.object,
@@ -16,4 +16,4 @@
     onKeyDown: React.PropTypes.func,
     filterOption: React.PropTypes.func,
     disabled: React.PropTypes.bool,
-  ```
+  }```

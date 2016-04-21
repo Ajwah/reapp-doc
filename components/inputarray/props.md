@@ -1,4 +1,4 @@
-```
+```{
     namePrefix: React.PropTypes.string,
     inputContainerStyles: React.PropTypes.object,
     inputDefaultValue: React.PropTypes.string,
@@ -17,4 +17,4 @@
     inputStyles: React.PropTypes.object,
     clearOnInputBlank: React.PropTypes.bool,
     disabled: React.PropTypes.bool,
-  ```
+  }```

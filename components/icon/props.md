@@ -1,4 +1,4 @@
-```
+```{
     // width x height in pixels
     size: React.PropTypes.number,
 
@@ -14,4 +14,4 @@
     // internal props used for special styles
     isInTitleBar: React.PropTypes.bool,
     isInViewList: React.PropTypes.bool
-  ```
+  }```

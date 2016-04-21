@@ -1,4 +1,4 @@
-```
+```{
     // pass props to List.Item
     itemProps: React.PropTypes.object,
 
@@ -10,4 +10,4 @@
 
     // Don't add padding
     nopad: React.PropTypes.bool
-  ```
+  }```

@@ -1,4 +1,4 @@
-```
+```{
     // pass properties to Icon
     iconProps: React.PropTypes.object,
 
@@ -29,4 +29,4 @@
     // Props used for special display
     isInTitleBar: React.PropTypes.bool,
     isInViewList: React.PropTypes.bool,
-  ```
+  }```

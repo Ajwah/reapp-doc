@@ -1,11 +1,19 @@
-```
-    var { children, ...props } = this.props;
+```{,
+  return {
+    self: {
+      background: c.badgeBG,
+      color: c.badgeColor,
+      borderRadius: 100,
+      fontWeight: 'bold',
+      minWidth: '20px',
+      textAlign: 'center'
+    },
 
-    return (
-      <div {...this.componentProps()} {...props}>
-        <span {...this.componentProps('text')}>
-          {children}
-        </span>
-      </div>
-    );
-  ```
+    text: {
+      margin: 'auto 6px',
+      fontSize: '14px',
+      lineHeight: '20px',
+      fontWeight: 'normal'
+    }
+  };
+}```

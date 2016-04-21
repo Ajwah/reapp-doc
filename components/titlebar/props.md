@@ -1,4 +1,4 @@
-```
+```{
     width: React.PropTypes.number,
     height: React.PropTypes.number,
     left: React.PropTypes.node,
@@ -9,4 +9,4 @@
 
     // attach to side of screen
     attach: React.PropTypes.string
-  ```
+  }```

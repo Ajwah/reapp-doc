@@ -1,0 +1,27 @@
+// Missing entries from old documentation:
+// The entries listed below have newly been added and thus not covered by the old documentation
+
+buttons
+  backbutton
+  menubuttom
+cardlist
+dottedviewlist
+form
+gallerycard
+galleryimage
+inputarray
+inputarrayinputs
+layoutleftnav
+modalbutton
+modalportal
+nestedviewlist
+popoverportal
+staticcontainer
+svg
+swiper
+typeahead
+typeaheadbutton
+typeaheadlist
+typeaheadoption
+typeaheadselector
+view

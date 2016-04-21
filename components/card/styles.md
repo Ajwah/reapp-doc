@@ -1,13 +1,20 @@
-```
-    var {
-      children,
-      title,
-      ...props } = this.props;
+```{,
+  self: {
+    background: '#fff',
+    width: '100%',
+    padding: 8,
+    borderRadius: 2,
+    boxShadow: '0 0 6px rgba(0,0,0,0.1)',
+    margin: '5px 0'
+  },
 
-    return (
-      <div {...this.componentProps()} {...props}>
-        {this.makeSection('title', title)}
-        {this.makeSection('content', children)}
-      </div>
-    );
-  ```
+  title: {
+    fontSize: '17px',
+    color: '#000'
+  },
+
+  content: {
+    fontSize: '16px',
+    color: '#555'
+  }
+}```

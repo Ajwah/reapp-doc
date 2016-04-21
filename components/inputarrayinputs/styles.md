@@ -1,4 +1,4 @@
-```
+```{ ?????
   	return this.props.inputs.map((item, index) => {
   	  var inputName = this.props.namePrefix + index;
   	  var inputType = "text";
@@ -27,15 +27,15 @@
   	  }
       return (
         <Form.Input ref={inputName}
-          key={index} 
-          type={inputType} 
-      	  name={inputName} 
-      	  defaultValue={inputDefaultValue} 
-      	  disabled={inputDisabled} 
+          key={index}
+          type={inputType}
+      	  name={inputName}
+      	  defaultValue={inputDefaultValue}
+      	  disabled={inputDisabled}
           styles={this.props.inputStyles}
-          onBlur={this.props.handleInputBlur.bind(null,this)} 
-      	  placeholder={inputPlaceholder} 
+          onBlur={this.props.handleInputBlur.bind(null,this)}
+      	  placeholder={inputPlaceholder}
       	  label={inputLabel} />
       );
     });
-  ```
+  }```

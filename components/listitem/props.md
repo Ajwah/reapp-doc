@@ -1,4 +1,4 @@
-```
+```{
     // displayed in bold at the top
     title: React.PropTypes.node,
 
@@ -22,4 +22,4 @@
 
     // don't add padding
     nopad: React.PropTypes.bool
-  ```
+  }```

@@ -1,26 +1,49 @@
-```
-    if (this.state.checked) {
-      this.addStyles('toggle', 'toggleIsChecked');
-      this.addStyles('toggleSwitch', 'toggleSwitchIsChecked');
-    }
+```{,
+  self: {
+    position: 'relative'
+  },
 
-    if (this.enableAnimations) {
-      this.addStyles('toggle', 'animate');
-      this.addStyles('toggleSwitch', 'animate');
-    }
+  input: {
+    display: 'none'
+  },
 
-    var { onChange, defaultChecked, checked, ...props } = this.props;
+  toggle: {
+    position: 'relative',
+    width: '52px',
+    borderRadius: '16px',
+    height: '32px',
+    background: '#e5e5e5',
+    appearance: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    zIndex: 0,
+    margin: 0,
+    padding: 0
+  },
 
-    return (
-      <Tappable {...this.componentProps()} onTap={this.handleChange} stopPropagation>
-        <input
-          {...this.componentProps('input')}
-          {...props}
-          defaultChecked={this.state.checked}
-        />
-        <span {...this.componentProps('toggle')}>
-          <span {...this.componentProps('toggleSwitch')} />
-        </span>
-      </Tappable>
-    );
-  ```
+  toggleIsChecked: {
+    background: '#4cd964'
+  },
+
+  toggleSwitch: {
+    content: ' ',
+    height: '28px',
+    width: '28px',
+    borderRadius: '28px',
+    background: '#fff',
+    position: 'absolute',
+    zIndex: 2,
+    top: 2,
+    left: 2,
+    boxShadow: '0 2px 5px rgba(0,0,0,0.35)',
+    transform: 'translateX(0px)'
+  },
+
+  toggleSwitchIsChecked: {
+    transform: 'translateX(22px)'
+  },
+
+  animate: {
+    transitionDuration: '300ms'
+  }
+}```

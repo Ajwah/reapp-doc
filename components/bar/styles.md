@@ -1,34 +1,23 @@
 ```
-    var {
-      display,
-      children,
-      barItemProps,
-      activeIndex,
-      position,
-      wrap,
-      ...props } = this.props;
+ self: {
+    background: c.barBG,
+    height: c.barHeight,
+    lineHeight: c.barLineHeight,
+    borderTop: `${c.onePx} solid ${c.barBorderColor}`,
+    zIndex: 3,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    flexFlow: 'row',
+    margin: 0,
+    padding: 0,
+    justifyContent: 'space-between',
+    alignContent: 'stretch',
+    textAlign: 'center'
+  },
 
-    if (position)
-      this.addStyles(`position-${position}`);
-
-    return (
-      <div {...this.componentProps()} {...props}>
-        {React.Children.map(children, (child, i) => {
-          var childProps = {
-            display,
-            active: i === activeIndex,
-            key: i
-          };
-
-          if (wrap)
-            return (
-              <BarItem {...barItemProps} {...childProps}>
-                {child}
-              </BarItem>
-            );
-
-          return clone(child, childProps, true);
-        })}
-      </div>
-    );
-  ```
+  'position-top': {
+    top: 0,
+    bottom: 'auto'
+  }
+```

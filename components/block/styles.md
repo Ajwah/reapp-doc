@@ -1,17 +1,27 @@
-```
-    var { width, pad, row, children, ...props } = this.props;
+```{,
+  self: {
+    boxSizing: 'border-box',
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 0,
+    flexShrink: 0,
+    paddingRight: '0.5rem',
+    paddingLeft: '0.5rem'
+  },
 
-    if (pad)
-      this.addStyles('pad');
+  firstChild: {
+    paddingLeft: 0
+  },
 
-    if (row)
-      this.addStyles('row');
+  lastChild: {
+    paddingRight: 0
+  },
 
-    this.addStyles(this.getWidthStyle(width));
+  row: {
+    flexDirection: 'row'
+  },
 
-    return (
-      <div {...this.componentProps()} {...props}>
-        {children}
-      </div>
-    );
-  ```
+  pad: {
+    padding: '15px'
+  }
+}```

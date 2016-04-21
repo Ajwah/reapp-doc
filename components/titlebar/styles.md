@@ -1,60 +1,47 @@
-```
-    var {
-      left,
-      right,
-      children,
-      height,
-      transparent,
-      attach,
-      ...props } = this.props;
+```{
+self: {
+    background: c.titleBarBG,
+    borderColor: c.titleBarBorderColor,
+    borderStyle: 'solid',
+    borderWidth: 0,
+    borderBottomWidth: c.onePx,
+    height: c.titleBarHeight,
+    fontSize: c.titleBarFontSize,
+    padding: 0,
+    textAlign: 'center',
+    top: 0,
+    left: 0,
+    width: '100%',
+    fontWeight: 500,
+    zIndex: 1,
+    flexFlow: 'row',
+    justifyContent: 'space-between',
+  },
 
-    var l, m, r;
+  transparent: {
+    background: 'none',
+    borderBottom: 'none'
+  },
 
-    // allow shorthand array entry
-    if (!left && !right && Array.isArray(children)) {
-      l = children[0];
-      m = children[1];
-      r = children[2];
-    }
-    else {
-      l = left;
-      m = children;
-      r = right;
-    }
+  left: {
+    margin: 'auto 0'
+  },
 
-    const statusBarHeight = this.getConstant('statusBarHeight');
-    if (statusBarHeight)
-      this.addStyles({
-        height: height + statusBarHeight,
-        paddingTop: statusBarHeight
-      });
-    else if (height)
-      this.addStyles({ height });
+  mid: {
+    color: c.titleBarColor,
+    margin: 'auto 0',
+    position: 'relative',
+    fontWeight: 500
+  },
 
-    if (transparent)
-      this.addStyles('transparent');
+  right: {
+    margin: 'auto 0'
+  },
 
-    if (attach)
-      this.addStyles(`attach-${attach}`);
-
-    return (
-      <div
-        {...this.componentProps()}
-        {...this.multiTap(2, this.handleDoubleTap)}
-        {...props}>
-        {l &&
-          <div {...this.componentProps('left')}>
-            {this.addTitleBarProps(l)}
-          </div>
-        }
-        <div {...this.componentProps('mid')}>
-          {m}
-        </div>
-        {r &&
-          <div {...this.componentProps('right')}>
-            {this.addTitleBarProps(r)}
-          </div>
-        }
-      </div>
-    );
-  ```
+  'attach-bottom': {
+    top: 'auto',
+    bottom: 0,
+    borderBottom: 'none',
+    borderTopWidth: c.onePx
+  }
+}```

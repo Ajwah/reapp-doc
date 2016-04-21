@@ -1,14 +1,14 @@
 ```
-    var { title, children, ...props } = this.props;
+  self: {
+    display: 'flex',
+    flexFlow: 'row',
+    width: '100%',
+    justifyContent: 'space-between'
+  },
 
-    return (
-      <label {...this.componentProps()} {...props}>
-        {title && (
-          <span {...this.componentProps('title')}>
-            {title}
-          </span>
-        )}
-        {children}
-      </label>
-    );
-  ```
+  title: {
+    color: '#000',
+    margin: 'auto auto auto 0',
+    minWidth: '30%'
+  }
+```

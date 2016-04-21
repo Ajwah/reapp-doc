@@ -1,37 +1,68 @@
 ```
-    var { children, open, ...props } = this.props;
+    self: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      visibility: 'hidden',
+      zIndex: -1
+    },
 
-    if (open) {
-      this.addClass('open');
-      this.addStyles('open');
+    open: {
+      visibility: 'visible',
+      zIndex: 15000,
+      opacity: 1
+    },
+
+    bg: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: c.popoverOverlayBG
+    },
+
+    popover: {
+      position: 'absolute',
+      fontSize: '16px',
+      background: c.popoverBG,
+      borderRadius: 5,
+      textAlign: 'center'
+    },
+
+    list: {
+      padding: 0,
+      margin: 0
+    },
+
+    link: {
+      textDecoration: 'none',
+      padding: 7
+    },
+
+    arrow: {
+      position: 'absolute',
+      overflow: 'hidden',
+      top: 0,
+      left: '50%'
+    },
+
+    arrowInner: {
+      background: c.popoverBG,
+      position: 'absolute',
+      left: 0,
+      borderRadius: 3,
+      transform: 'rotate(45deg)'
+    },
+
+    item: {
+      minWidth: 120,
+      borderTop: c.popoverItemBorder
+    },
+
+    itemFirstChild: {
+      borderTop: 'none'
     }
-
-    this.addPositionStyles();
-
-    var linkStyles = this.getStyles('link');
-
-    return (
-      <div {...this.componentProps()} {...props}>
-        <Tappable
-          {...this.componentProps('bg')}
-          onTap={this.handlePopoverSelect}
-          stopPropagation
-        />
-        <div {...this.componentProps('popover')}>
-          <div {...this.componentProps('arrow')}>
-            <div {...this.componentProps('arrowInner')} />
-          </div>
-          <div {...this.componentProps('list')}>
-            {React.Children.map(children, (li, i) => (
-              <div key={i} styles={this.getStyles('item', i)}>
-                <Tappable
-                  onTap={this.handlePopoverSelect.bind(this, li.props.onClick)}>
-                  {clone(li, { styles: linkStyles }, true)}
-                </Tappable>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  ```
+```

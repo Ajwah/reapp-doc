@@ -1,4 +1,4 @@
-```
+```{
     behavior: React.PropTypes.object,
     translate: React.PropTypes.object,
     from: React.PropTypes.oneOf([
@@ -11,4 +11,4 @@
     draggerWidth: React.PropTypes.number,
     width: React.PropTypes.number,
     height: React.PropTypes.number
-  ```
+}```

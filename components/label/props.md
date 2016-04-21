@@ -1,3 +1,3 @@
-```
-    title: React.PropTypes.string
-  ```
+```{
+  title: React.PropTypes.string
+}```

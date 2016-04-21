@@ -1,10 +1,20 @@
 ```
-    var {
-      confirm,
-      ...props } = this.props;
+    self: {
+      height: '44px',
+      borderWidth: c.onePx,
+      borderColor: c.modalBorderColor,
+      borderBottom: 'none',
+      borderTop: 'none',
+      borderRight: 'none',
+      flexGrow: 1,
+      borderRadius: 0
+    },
 
-    if (confirm)
-      this.addStyles('confirm');
+    firstChild: {
+      borderLeft: 'none'
+    },
 
-    return <Button {...this.componentProps()} {...props} />;
-  ```
+    confirm: {
+      fontWeight: 700
+    }
+```

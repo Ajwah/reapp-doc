@@ -1,9 +1,8 @@
 ```
-    var { children, ...props } = this.props;
-
-    return (
-      <h3 {...this.componentProps()} {...props}>
-        {children}
-      </h3>
-    );
-  ```
+    fontSize: '13px',
+    textTransform: 'uppercase',
+    color: '#888',
+    padding: '10px 0 2px 0',
+    margin: '10px 0 5px',
+    fontWeight: 'normal'
+```

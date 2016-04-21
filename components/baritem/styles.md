@@ -1,34 +1,54 @@
-```
-    var {
-      icon,
-      children,
-      display,
-      iconProps,
-      active,
-      ...props } = this.props;
+```{,
+  return {
+    self: {
+      flexGrow: 1,
+      flexShrink: 0,
+      color: c.barColor,
+      justifyContent: 'center'
+    },
 
-    this.addStyles(display);
+    icon: {
+      margin: 'auto',
+      flexGrow: 1,
+      height: '100%'
+    },
 
-    if (active)
-      this.addStyles('active');
+    active: {
+      backgroundColor: c.barBG,
+      color: c.barColorActive,
+      fontWeight: 500
+    },
 
-    if (typeof icon === 'string')
-      icon = (
-        <Icon
-          color={this.getConstant(active ? 'barColorActive' : 'barColor')}
-          fill={this.getConstant(active ? 'barColorActive' : 'barColor')}
-          size={(display === 'icon-text-right') ? 24 : 32}
-          file={icon}
-          styles={this.getStyles('icon')}
-          svgProps={{style: { margin: 'auto' }}}
-          {...iconProps}
-        />
-      );
+    'icon__text': {
+      display: 'none'
+    },
 
-    return (
-      <div {...this.tappableProps()} {...this.componentProps()} {...props}>
-        {display != 'text' && this.makeSection('icon', icon)}
-        {display != 'icon' && this.makeSection('text', children)}
-      </div>
-    );
-  ```
+    'display:icon__icon': {
+      flexGrow: 1
+    },
+
+    'display:icon-text__icon': {
+      margin: '-2px 0 -2px 0',
+      flexGrow: 1
+    },
+
+    'display:icon-text__text': {
+      fontSize: '11px',
+      lineHeight: '11px',
+      fontWeight: 500,
+      margin: '0 0 2px 0'
+    },
+
+    'icon-text-right': {
+      flexFlow: 'row'
+    },
+
+    'display:icon-text-right__icon': {
+      margin: '0 4px 0 0'
+    },
+
+    'display:icon-text-right__text': {
+      fontSize: '12px'
+    }
+  };
+}```

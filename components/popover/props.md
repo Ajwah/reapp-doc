@@ -1,4 +1,4 @@
-```
+```{
     // element the popover is pointing towards
     target: React.PropTypes.object.isRequired,
 
@@ -15,4 +15,4 @@
     onClose: React.PropTypes.func,
     animationDuration: React.PropTypes.number,
     animations: React.PropTypes.object
-  ```
+  }```

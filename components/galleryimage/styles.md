@@ -1,14 +1,16 @@
 ```
-    var { url, height, ...props } = this.props;
+  self: {
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    width: '100%',
+    position: 'absolute',
+    left: 0,
+    top: 0
+  }
 
-    this.addStyles({
-      backgroundImage: `url(${url})`,
-      height,
-    });
+  backgroundImage: `url(${url})`
+  height:
 
-    return (
-      <div {...this.componentProps()} {...props}>
-        <div {...this.componentProps('img')}></div>
-      </div>
-    );
-  ```
+  img:
+```

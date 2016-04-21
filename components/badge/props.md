@@ -1,3 +1,3 @@
-```
-    children: React.PropTypes.node
-  ```
+```{
+  children: React.PropTypes.node
+}```

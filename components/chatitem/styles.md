@@ -1,36 +1,40 @@
 ```
-    var {
-      children,
-      name,
-      date,
-      image,
-      own,
-      plain,
-      ...props } = this.props;
+self: {
+  fontSize: '16px',
+  padding: '10px',
+  margin: '5px 0',
+  flexFlow: 'row',
+  alignItems: 'center',
+  backgroundColor: c.chatItemBG,
+  color: c.chatItemColor,
+  borderRadius: '15px',
+  maxWidth: '80%',
+  position: 'relative'
+},
 
-    if (own) {
-      this.addStyles('own');
-      this.addStyles('arrow', 'arrowOwn');
-      this.addClass('own');
-    }
-    else {
-      this.addClass('them');
-    }
+inner: {
+  overflow: 'hidden',
+  margin: 0
+},
 
-    var tapProps;
-    if (this.props.onTap) {
-      tapProps = this.tappableProps();
-      this.addClass(tapProps.className);
-    }
+own: {
+  backgroundColor: c.chatItemOwnBG,
+  alignSelf: 'flex-end',
+},
 
-    return (
-      <div {...tapProps} {...props} {...this.componentProps()}>
-        <p {...this.componentProps('inner')}>
-          {children}
-        </p>
-        {!plain &&
-          <div {...this.componentProps('arrow')} />
-        }
-      </div>
-    );
-  ```
+arrow: {
+  position: 'absolute',
+  zIndex: 1,
+  bottom: '1px',
+  left: '-6px',
+  borderRadius: '10px / 5px',
+  border: '8px solid transparent',
+  borderBottomColor: c.chatItemBG
+},
+
+arrowOwn: {
+  left: 'auto',
+  right: '-6px',
+  borderBottomColor: c.chatItemOwnBG
+}
+```

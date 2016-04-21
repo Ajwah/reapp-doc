@@ -1,17 +1,18 @@
 require 'pry'
-def render(dir, files)
-  %x(mkdir #{dir.split('src/')[1]})
-  Dir.chdir "#{dir.split('src/')[1]}"
+def render(dir, files, mode)
   files.split("\n").each do |file|
     puts
     puts file
     %x(mkdir #{file.split('.')[0].downcase})
     Dir.chdir "#{file.split('.')[0].downcase}"
     b = %x(cat #{dir}#{file})
-    props = b.match /propTypes.*(?=\{((?:[^{}]++|\{\g<1>\})++)\})/
-    render = b.match /render.*(?=\{((?:[^{}]++|\{\g<1>\})++)\})/
-    File.open('props.md', 'w') { |f| f.write("```#{props.to_a[1]}```") }
-    File.open('styles.md', 'w') { |f| f.write("```#{render.to_a[1]}```") }
+    if mode
+      props = b.match /propTypes.*(?=\{((?:[^{}]++|\{\g<1>\})++)\})/
+      File.open('props.md', 'w') { |f| f.write("```{#{props.to_a[1]}}```") }
+    else
+      render = b.match /(?=\{((?:[^{}]++|\{\g<1>\})++)\})/
+      File.open('styles.md', 'w') { |f| f.write("```{#{render.to_a.join(',')}}```") }
+    end
     %x(touch desc.md)
     %x(touch code.md)
     Dir.chdir ".."
@@ -20,9 +21,19 @@ def render(dir, files)
 end
 
 dir = "/Users/Coder/FI/reapp/reapp-ui/src/components/"
+%x(mkdir #{dir.split('src/')[1]})
 files = %x(ls #{dir})
-render(dir, files)
+Dir.chdir "#{dir.split('src/')[1]}"
+render(dir, files, true)
+
 
 dir = "/Users/Coder/FI/reapp/reapp-ui/src/components/buttons/"
+%x(mkdir #{dir.split('src/')[1]})
 files = %x(ls #{dir})
-render(dir, files)
+Dir.chdir "#{dir.split('src/')[1]}"
+render(dir, files, true)
+
+
+dir = "/Users/Coder/FI/reapp/test/node_modules/reapp-ui/themes/ios/styles/"
+files = %x(ls #{dir})
+render(dir, files, false)

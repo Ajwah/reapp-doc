@@ -1,3 +1,6 @@
 ```
-  //  this.setState({inputs: this._renderInputs()});
-  //```
+self: {}
+addInput: {
+  cursor: 'pointer',
+}
+```

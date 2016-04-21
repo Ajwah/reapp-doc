@@ -1,15 +1,12 @@
 ```
-    var itemProps = {
-      noicon: true,
-      styles: {
-        self: { border: 'none' },
-        children: { color: '#fff' }
-      }
-    };
-
-    return (
-      <List {...this.componentProps()} itemProps={itemProps} {...this.props}>
-        {this.props.children}
-      </List>
-    );
-  ```
+  self: {
+    background: '#000',
+    border: '10px solid #000',
+    position: 'absolute',
+    listStyle: 'none',
+    margin: 0,
+    padding: 0,
+    width: '100%',
+    height: '100%'
+  }
+```
