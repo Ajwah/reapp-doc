@@ -1,11 +1,11 @@
 ```
-  self: {
-    position: 'relative',
-    minHeight: 44,
-    minWidth: 44
-  },
+  export default {
 
-  input: {
-    display: 'none'
+    self: {
+    },
+
+    input: {
+    }
+
   }
 ```

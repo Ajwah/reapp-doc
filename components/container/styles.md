@@ -1,12 +1,11 @@
-```{,
-  self: {
-    boxSizing: 'border-box',
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap'
-  },
+```
+  export default {
 
-  col: {
-    flexDirection: 'column'
+    self: {
+    },
+
+    col: {
+    }
+
   }
-}```
+```

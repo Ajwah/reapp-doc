@@ -1,14 +1,11 @@
 ```
-  self: {
-    display: 'flex',
-    flexFlow: 'row',
-    width: '100%',
-    justifyContent: 'space-between'
-  },
+  export default {
 
-  title: {
-    color: '#000',
-    margin: 'auto auto auto 0',
-    minWidth: '30%'
+    self: {
+    },
+
+    title: {
+    }
+
   }
 ```

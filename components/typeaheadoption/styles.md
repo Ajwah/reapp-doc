@@ -1,4 +1,9 @@
 ```
-  typeaheadButton:
-  optionStyles
+  export default c => ({
+
+    typeaheadButton: {
+
+    }
+
+  })
 ```

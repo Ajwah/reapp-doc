@@ -1,4 +1,9 @@
 ```
-self: {
+  export default c => ({
 
-}```
+    self: {
+
+    }
+
+  })
+```

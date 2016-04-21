@@ -1,5 +1,8 @@
-```{,
-  self: {
-    margin: 0
+```
+  export default {
+
+    self: {
+    }
+
   }
-}```
+```

@@ -1,27 +1,20 @@
 ```
-  self: {
-    position: 'relative'
-  },
+  export default {
 
-  above: {
-    position: 'relative',
-    zIndex: 2
-  },
+    self: {
+    },
 
-  below: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: 1
-  },
+    above: {
+    },
 
-  right: {
-    left: 'auto'
-  },
+    below: {
+    },
 
-  left: {
-    right: 'auto'
+    right: {
+    },
+
+    left: {
+    }
+
   }
 ```

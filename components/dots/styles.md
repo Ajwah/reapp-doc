@@ -1,28 +1,17 @@
 ```
-  { hexToRGB, hexToRGBA } = require('../../../lib/ConstantsHelpers');
+  export default c => ({
 
-  self: {
-    pointerEvents: 'none',
-  }
+    self: {
+    },
 
-  dotInactive: {
-    borderRadius: 10,
-    width: 4,
-    height: 4,
-    margin: 2,
-    background: hexToRGBA(c.dotBG, 0.2)
-  }
+    dotInactive: {
+    },
 
-  dotActive: {
-    borderRadius: 10,
-    width: 4,
-    height: 4,
-    margin: 2,
-    background: hexToRGB(c.dotBG)
-  }
+    dotActive: {
+    },
 
-  inner: {
-    margin: 'auto',
-    flexFlow: 'row',
-  }
-}```
+    inner: {
+    }
+
+  })
+```

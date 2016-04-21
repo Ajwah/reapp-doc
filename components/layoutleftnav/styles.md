@@ -1,29 +1,17 @@
 ```
-  self: {
-    overflowX: 'hidden',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0
-  },
+  export default {
 
-  side: {
-    position: 'fixed',
-    top: 0,
-    bottom: 0
-  },
+    self: {
+    },
 
-  sideInner: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0
-  },
+    side: {
+    },
 
-  drawer: {
-    left: 200,
-    marginLeft: 0
+    sideInner: {
+    },
+
+    drawer: {
+    }
+
   }
 ```

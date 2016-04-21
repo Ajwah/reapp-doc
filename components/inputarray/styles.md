@@ -1,6 +1,11 @@
 ```
-self: {}
-addInput: {
-  cursor: 'pointer',
-}
+  export default c => ({
+
+    self: {
+    },
+
+    addInput: {
+    }
+
+  })
 ```

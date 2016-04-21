@@ -1,70 +1,38 @@
 ```
-self: {
-  position: 'fixed',
-  width: '100%',
-  height: '100%',
-  background: '#fbfbfb',
-  zIndex: 4
-},
+  export default c => ({
 
-inner: {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0
-},
+    self: {
+    },
 
-'from-right': {
-  top: 0,
-  left: 0
-},
+    inner: {
+    },
 
-'from-left': {
-  top: 0,
-  right: 0
-},
+    'from-right': {
+    },
 
-'from-bottom': {
-  left: 0,
-  bottom: 0
-},
+    'from-left': {
+    },
 
-'from-top': {
-  left: 0,
-  top: 0
-},
+    'from-bottom': {
+    },
 
-dragger: {
-  position: 'absolute',
-  zIndex: 3
-},
+    'from-top': {
+    },
 
-topDragger: {
-  bottom: 0,
-  left: 0,
-  right: 0,
-  height: c.edgeWidth
-},
+    dragger: {
+    },
 
-bottomDragger: {
-  top: 0,
-  right: 0,
-  left: 0,
-  height: c.edgeWidth
-},
+    topDragger: {
+    },
 
-rightDragger: {
-  top: 0,
-  left: 0,
-  bottom: 0,
-  width: c.edgeWidth
-},
+    bottomDragger: {
+    },
 
-leftDragger: {
-  top: 0,
-  right: 0,
-  bottom: 0,
-  width: c.edgeWidth
-}
+    rightDragger: {
+    },
+
+    leftDragger: {
+    }
+
+  })
 ```

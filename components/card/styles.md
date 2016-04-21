@@ -1,20 +1,14 @@
-```{,
-  self: {
-    background: '#fff',
-    width: '100%',
-    padding: 8,
-    borderRadius: 2,
-    boxShadow: '0 0 6px rgba(0,0,0,0.1)',
-    margin: '5px 0'
-  },
+```
+  export default {
 
-  title: {
-    fontSize: '17px',
-    color: '#000'
-  },
+    self: {
+    },
 
-  content: {
-    fontSize: '16px',
-    color: '#555'
+    title: {
+    },
+
+    content: {
+    }
+
   }
-}```
+```

@@ -1,31 +1,20 @@
-```{,
-  self: {
-    width: '100%',
-    flexFlow: 'row'
-  },
+```
+  export default {
 
-  buttonFirst: {
-    flexGrow: 1,
-    borderTopRightRadius: 0,
-    borderBottomRightRadius: 0
-  },
+    self: {
+    },
 
-  buttonFirstTwoTotal: {
-    flexGrow: 1,
-    borderTopRightRadius: 0,
-    borderBottomRightRadius: 0
-  },
+    buttonFirst: {
+    },
 
-  buttonMiddle: {
-    flexGrow: 1,
-    borderRadius: 0,
-    borderLeft: 'none'
-  },
+    buttonFirstTwoTotal: {
+    },
 
-  buttonLast: {
-    flexGrow: 1,
-    borderTopLeftRadius: 0,
-    borderBottomLeftRadius: 0,
-    borderLeft: 'none'
+    buttonMiddle: {
+    },
+
+    buttonLast: {
+    }
+
   }
-}```
+```
