@@ -1,4 +1,6 @@
-```{
-  children: React.PropTypes.node,
-  buttonProps: React.PropTypes.object
-}```
+```
+  propTypes: {
+    children: React.PropTypes.node,
+    buttonProps: React.PropTypes.object
+  }
+```

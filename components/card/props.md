@@ -1,4 +1,6 @@
-```{
-  title: React.PropTypes.string,
-  children: React.PropTypes.node
-}```
+```
+  propTypes: {
+    title: React.PropTypes.string,
+    children: React.PropTypes.node
+  }
+```

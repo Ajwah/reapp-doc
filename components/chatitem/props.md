@@ -1,4 +1,5 @@
-```{
+```
+  propTypes: {
     // Text name for chat bubble
     name: React.PropTypes.string,
 
@@ -13,4 +14,5 @@
 
     // No decoration on chat bubble
     plain: React.PropTypes.bool
-}```
+  }
+```

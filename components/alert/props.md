@@ -1,9 +1,6 @@
 ```
-  export default c => ({
+  propTypes: {
+    children: React.PropTypes.node
+  }
 
-    propTypes: {
-      children: React.PropTypes.node
-    }
-
-  })
 ```
