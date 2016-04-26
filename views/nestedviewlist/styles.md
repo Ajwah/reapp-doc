@@ -1,8 +1,8 @@
 ```
-  export default {
+  export default c => ({
 
     isNested: {
     }
 
-  }
+  })
 ```

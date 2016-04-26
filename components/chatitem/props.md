@@ -1,5 +1,7 @@
 ```
   propTypes: {
+    children: React.PropTypes.node,
+
     // Text name for chat bubble
     name: React.PropTypes.string,
 

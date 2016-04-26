@@ -1,9 +1,13 @@
-```{
+```
+  propTypes: {
     size: React.PropTypes.number,
     name: React.PropTypes.string,
     color: React.PropTypes.string,
     stroke: React.PropTypes.number,
     shapeRendering: React.PropTypes.string,
     viewBox: React.PropTypes.string,
-    crisp: React.PropTypes.bool
-  }```
+    crisp: React.PropTypes.bool,
+    file: React.PropTypes.object,
+    style: React.PropTypes.object
+  }
+```

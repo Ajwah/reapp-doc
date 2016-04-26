@@ -1,5 +1,5 @@
 ```
-  export default {
+  export default c => ({
 
     self: {
     },
@@ -10,5 +10,5 @@
     content: {
     }
 
-  }
+  })
 ```

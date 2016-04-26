@@ -1,4 +1,5 @@
-```{
+```
+  propTypes: {
     // displayed in bold at the top
     title: React.PropTypes.node,
 
@@ -21,5 +22,13 @@
     icon: React.PropTypes.bool,
 
     // don't add padding
-    nopad: React.PropTypes.bool
-  }```
+    nopad: React.PropTypes.bool,
+
+    children: React.PropTypes.node,
+
+    index: React.PropTypes.number,
+
+    fulltext: React.PropTypes.bool
+
+  }
+```

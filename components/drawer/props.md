@@ -1,4 +1,6 @@
-```{
+TODO: determine what are `animatedProps` and `scroller`
+```
+  propTypes: {
     behavior: React.PropTypes.object,
     translate: React.PropTypes.object,
     from: React.PropTypes.oneOf([
@@ -10,5 +12,11 @@
     dragger: React.PropTypes.bool,
     draggerWidth: React.PropTypes.number,
     width: React.PropTypes.number,
-    height: React.PropTypes.number
-}```
+    height: React.PropTypes.number,
+
+    animatedProps: React.PropTypes.???,
+    update: React.PropTypes.bool,
+    scroller: React.PropTypes.???,
+    children: React.PropTypes.node
+  }
+```

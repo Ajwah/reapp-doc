@@ -1,9 +1,9 @@
 ```
-  export default {
+  export default c => ({
 
     self: {
 
     }
 
-  }
+  })
 ```

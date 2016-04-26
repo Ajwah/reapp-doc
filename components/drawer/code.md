@@ -1,5 +1,5 @@
+TODO: Not functional as yet
 ```
-  <!-- Not working -->
   render() {
     var image = require('../../assets/photos/sunrise.jpg');
     return (

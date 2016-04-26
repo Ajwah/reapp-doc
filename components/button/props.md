@@ -1,5 +1,5 @@
 ```
-  propTypes:  {
+  propTypes: {
     // pass properties to Icon
     iconProps: React.PropTypes.object,
 

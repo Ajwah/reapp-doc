@@ -1,3 +1,4 @@
+TODO: add `children: React.PropTypes.node` in source code
 ```
   propTypes: {
     // one of text, icon, icon-text, icon-text-right
@@ -14,5 +15,7 @@
 
     // automatically wrap children with BarItem
     wrap: React.PropTypes.bool
+
+    children: React.PropTypes.node
   }
 ```

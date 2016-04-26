@@ -1,5 +1,5 @@
 ```
-  exports['default'] = c => ({
+  export default c => ({
 
     self: {
     }

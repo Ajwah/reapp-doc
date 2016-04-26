@@ -4,6 +4,8 @@
     itemProps: React.PropTypes.object,
 
     // auto wrap children with ChatItem
-    wrap: React.PropTypes.bool
+    wrap: React.PropTypes.bool,
+
+    children: React.PropTypes.node
   }
 ```
