@@ -11,6 +11,69 @@ been added accordingly.
 
 In order to run the example code, create a new reapp-app, and under Home, add the component
 to the render method.
+Examples:
+
+For the `Alert` component, following code example is provided:
+```
+  <Alert styles={{self: {background: 'red'} }}>
+    this is an alert
+  </Alert>
+```
+which is to be added as:
+
+```
+  import { Reapp, React, Alert } from 'reapp-kit';
+
+  class Home extends React.Component {
+    render() {
+      return (
+        <Alert styles={{self: {background: 'red'} }}>
+          this is an alert
+        </Alert>
+      );
+    }
+  }
+
+  export default Reapp(Home);
+```
+
+For other components, more detail is provided such as for `Modal` which can be used as follows:
+```
+  import { Reapp, React, Modal, Button } from 'reapp-kit';
+
+  class Home extends React.Component {
+    constructor() {
+      super();
+      this.state = { modal: false };
+    }
+
+    toggleModal(type) {
+      this.setState({ modal: type });
+    }
+
+    render() {
+      return (
+        <div>
+          { this.state.modal &&
+            <Modal styles={{inner: {background: 'blue'},
+                            text: {background: 'yellow'},
+                            title: {background: 'red'},
+                            buttons: {background: 'green'}}}
+              title="Hello"
+              children={["Something", "Another"]}
+              type={this.state.modal}
+              onClose={this.toggleModal.bind(this, false)}
+            />
+          }
+
+          <Button onTap={this.toggleModal.bind(this, 'confirm')}>Confirm</Button>
+        </div>
+      );
+    }
+  }
+
+  export default Reapp(Home);
+```
 
 ### TODO
 Some of the code examples are not in operational order:
@@ -22,7 +85,10 @@ Some of the code examples are not in operational order:
   * components/list/code.md:Todo: demonstrate usage of type-inset styling.
   * components/listitem/code.md:Todo: demonstrate usage of type-inset styling.
 
-Some of the props are unclear as to what type they should be.
+Some of the components have no code example:
+  * components/layoutleftnav/code.md
+
+Some of the props are unclear as to of what type they should be.
   * components/bar/props.md:TODO: add `children: React.PropTypes.node` in source code
   * components/cardlist/props.md:TODO: Lack of propTypes because CardList is still a work in progress.
   * components/drawer/props.md:TODO: determine what are `animatedProps` and `scroller`
