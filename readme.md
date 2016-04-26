@@ -1,17 +1,21 @@
 # Reapp Documentation
 
-In order to improve the existing documentation, for every component is provided
-a description(which is mainly limited to description of old documentation), a
-code example(taken from some examples in kitchen-sink but majority are own
-examples) together with separate specification of the propTypes and styles applicable.
+In order to improve the existing documentation, every component is provided with:
+  * a description(which is mainly limited to description of old documentation),
+  * a code example(taken from some examples in kitchen-sink but majority are own
+examples),
+  * separate specification of the `propTypes` and
+  * styles applicable.
 
-The propTypes have been collected by combing through the source code and wherever
-there was a lack of certain props not being mentioned under propTypes, these have
+The `propTypes` have been collected by combing through the source code and wherever
+there was a lack of certain props not being mentioned under `propTypes`, these have
 been added accordingly.
 
-In order to run the example code, create a new reapp-app, and under Home, add the component
-to the render method.
-Examples:
+In order to run the example code, it suffices to create a new reapp-app and under `Home`,
+the exmplified component is to be added to the render method.
+
+
+###Examples:
 
 For the `Alert` component, following code example is provided:
 ```
@@ -77,7 +81,7 @@ For other components, more detail is provided such as for `Modal` which can be u
 
 ### TODO
 Some of the code examples are not in operational order:
-  * components/chatitem/code.md:TODO: propTypes name and date appear not to be working.
+  * components/chatitem/code.md:TODO: `propTypes` name and date appear not to be working.
   * components/drawer/code.md:TODO: Not functional as yet
   * components/input/code.md:TODO: styles are currently not having any effect.
   * components/textarea/code.md:TODO: demonstrate how to change styling of label
@@ -89,8 +93,8 @@ Some of the components have no code example:
   * components/layoutleftnav/code.md
 
 Some of the props are unclear as to of what type they should be.
-  * components/bar/props.md:TODO: add `children: React.PropTypes.node` in source code
-  * components/cardlist/props.md:TODO: Lack of propTypes because CardList is still a work in progress.
+  * components/bar/props.md:TODO: add `children: React.`PropTypes`.node` in source code
+  * components/cardlist/props.md:TODO: Lack of `propTypes` because CardList is still a work in progress.
   * components/drawer/props.md:TODO: determine what are `animatedProps` and `scroller`
   * components/gallery/props.md:TODO: Determine `closeIconProps`
   * components/input/props.md:TODO: Determine `labelProps`
